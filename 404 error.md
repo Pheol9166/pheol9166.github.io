@@ -9,7 +9,7 @@ author_profile: false
 
 <script>
   var GOOG_FIXURL_LANG = 'en';
-  var GOOG_FIXURL_SITE = 'https://devinlife.com'
+  var GOOG_FIXURL_SITE = 'https://pheol9166.github.io'
 </script>
 <script src="https://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
 </script>
