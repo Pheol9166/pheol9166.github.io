@@ -114,7 +114,7 @@ analytics:
 # Site Author
 author:
   name             : "SangMin Kim"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/tom2.jpg"
   bio              : "문돌이의 코딩도전기."
   location         : "South Korea"
   email            :
