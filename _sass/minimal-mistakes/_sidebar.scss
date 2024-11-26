@@ -17,7 +17,7 @@
   // }
 
   @include breakpoint($large) {
-    float: inline-start;
+    float: left;
     width: calc(#{$right-sidebar-width-narrow} - 1em);
     opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
@@ -28,12 +28,11 @@
     }
 
     &.sticky {
-      left: 0;
       overflow-y: auto;
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      max-height: calc(100vh - #{$nav-height} - 2em);
+      height: calc(100vh - #{$nav-height} - 2em);
     }
   }
 
@@ -78,10 +77,10 @@
   @include breakpoint($large) {
     position: absolute;
     top: 0;
-    inset-inline-end: 0;
+    right: 0;
     width: $right-sidebar-width-narrow;
-    margin-inline-end: -1 * $right-sidebar-width-narrow;
-    padding-inline-start: 1em;
+    margin-right: -1 * $right-sidebar-width-narrow;
+    padding-left: 1em;
     z-index: 10;
 
     &.sticky {
@@ -89,32 +88,25 @@
       position: -webkit-sticky;
       position: sticky;
       top: 2em;
-      float: inline-end;
-
-      .toc {
-        .toc__menu {
-          overflow-y: auto;
-          max-height: calc(100vh - 7em);
-        }
-      }
+      float: right;
     }
   }
 
   @include breakpoint($x-large) {
     width: $right-sidebar-width;
-    margin-inline-end: -1 * $right-sidebar-width;
+    margin-right: -1 * $right-sidebar-width;
   }
 }
 
 .splash .sidebar__right {
   @include breakpoint($large) {
     position: relative;
-    float: inline-end;
-    margin-inline-end: 0;
+    float: right;
+    margin-right: 0;
   }
 
   @include breakpoint($x-large) {
-    margin-inline-end: 0;
+    margin-right: 0;
   }
 }
 
@@ -325,6 +317,7 @@
     }
   }
 }
+
 /*
    Wide Pages
    ========================================================================== */
@@ -335,10 +328,10 @@
   @include breakpoint($large) {
     position: initial;
     top: initial;
-    inset-inline-end: initial;
+    right: initial;
     width: initial;
-    margin-inline-end: initial;
-    padding-inline-start: initial;
+    margin-right: initial;
+    padding-left: initial;
     z-index: initial;
 
     &.sticky {
@@ -348,6 +341,6 @@
 
   @include breakpoint($x-large) {
     width: initial;
-    margin-inline-end: initial;
+    margin-right: initial;
   }
 }
