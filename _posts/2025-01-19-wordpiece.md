@@ -121,7 +121,6 @@ segmentation algorithm은 기본 문자에서 시작하는 역 바이너리 트�
 
 ![image](https://github.com/user-attachments/assets/9dfde4ff-743c-4448-9586-2e5fd318e72c)
 
-
 단어 정의가 인벤토리 크기에 따라 달라지기에 perplexity 자체를 비교하는 것은 의미가 없으나, 문장 별 평균 비용(디코딩 과정에서의 로그 가능도를 통해 계산이 가능하다.)을 통해 비교할 수 있다.
 
 ## ✔ Dictionary
