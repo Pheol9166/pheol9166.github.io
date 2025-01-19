@@ -1,10 +1,10 @@
 /* ==========================================================================
-   SIDEBAR
-   ========================================================================== */
+  SIDEBAR
+  ========================================================================== */
 
 /*
-   Default
-   ========================================================================== */
+  Default
+  ========================================================================== */
 
 .sidebar {
   @include clearfix();
@@ -30,7 +30,7 @@
     &.sticky {
       overflow-y: auto;
       /* calculate height of nav list
-         viewport height - nav height - masthead x-padding
+          viewport height - nav height - masthead x-padding
       */
       height: calc(100vh - #{$nav-height} - 2em);
     }
@@ -111,8 +111,8 @@
 }
 
 /*
-   Author profile and links
-   ========================================================================== */
+    Author profile and links
+    ========================================================================== */
 
 .author__avatar {
   display: table-cell;
@@ -131,8 +131,8 @@
     border-radius: 50%;
 
     @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
+      padding: 0px;
+      border: 0px solid $border-color;
     }
   }
 }
@@ -319,8 +319,8 @@
 }
 
 /*
-   Wide Pages
-   ========================================================================== */
+    Wide Pages
+    ========================================================================== */
 
 .wide .sidebar__right {
   margin-bottom: 1em;
