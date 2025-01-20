@@ -98,7 +98,7 @@ SentencePiece는 메타 기호들(ex. `UNK`, `EOS`, `BOS`, `PAD` 등)의 id를 �
 
 SentencePiece에서 이루어지는 정규화는 string to string mapping과 leftmost longest matching을 사용하여 구현됩니다. 또한, 정규화 규칙들은 효율적인 정규화를 위해 유한 상태의 트랜스듀서로 컴파일됩니다. 
 
-<img src=https://github.com/user-attachments/assets/d4224938-ee6b-4c2e-b4bb-ac7c160321a6 width=400 alt="image">
+<img src="https://github.com/user-attachments/assets/d4224938-ee6b-4c2e-b4bb-ac7c160321a6" width=400 alt="image">
 
 SentencePiece는 TSV 파일을 이용한 커스텀 정규화 규칙들 역시 지원합니다. 위의 그림 2는 TSV 파일의 예시를 보여주고 있습니다. 예시에서는 유니코드 시퀀스 \[U+41, U+302, U+300]을 U+1EA6으로 변환하고 있습니다. `spm_train`의 `--normalization_rule_tsv=<file>`을 통해서 TSV 파일을 설정할 수 있습니다. 또한, task별로 기본 설정인 NFKC 규칙을 확장하는 형태로 규칙을 정의할 수 있습니다.
 
@@ -120,15 +120,15 @@ SentencePiece는 TSV 파일을 이용한 커스텀 정규화 규칙들 역시 �
 
 그렇기에, SentencePiece는 오프라인 전처리를 위한 독립적인 커맨드 라인 툴을 제공할 뿐만 아니라 즉각적 처리를 위한 C++, Python, Tensorflow 라이브러리 API를 제공하고 있습니다. 다음 이미지들은 각각 C++, Python, Tensorflow에서의 사용 모습입니다.
 
-<img src=https://github.com/user-attachments/assets/e8fd0749-a1ac-414d-b715-3301415bf4b2 width=400 alt=image>
+<img src="https://github.com/user-attachments/assets/e8fd0749-a1ac-414d-b715-3301415bf4b2" width=400 alt="image">
 
-<img src=https://github.com/user-attachments/assets/a48df596-0a2b-4c51-89ec-cf4f7d9888d8 width=400 alt=image>
+<img src="https://github.com/user-attachments/assets/a48df596-0a2b-4c51-89ec-cf4f7d9888d8" width=400 alt="image">
 
-<img src=https://github.com/user-attachments/assets/03166a5a-64a9-4732-9bb6-fae32c8ad7ee width=400 alt=image>
+<img src="https://github.com/user-attachments/assets/03166a5a-64a9-4732-9bb6-fae32c8ad7ee" width=400 alt="image">
 
 그림 6은 unigram language model를 사용해 subword regularization을 진행하는 파이썬 코드를 나타내고 있습니다. 여기서 텍스트인 "New York"은 실행횟수에 따라 다르게 토큰화되는데, 자세한 내용은 [Subword Regularizaiton](https://velog.io/@pheol9166/NLP-Paper-Review-Subword-Regularization#subword-sampling)을 봐주시길 바랍니다.
 
-<img src=https://github.com/user-attachments/assets/1355b54a-a31d-432e-8748-48ef3f223f4f width=400 alt=image>
+<img src="https://github.com/user-attachments/assets/1355b54a-a31d-432e-8748-48ef3f223f4f" width=400 alt="image">
 
 ## ✔ Experiments
 ### 📌 Comparison of different preprocessing
@@ -143,7 +143,7 @@ pre-tokenization에 사용할 토크나이저로는 영어의 경우 Moses token
 : 대소문자를 구분하여 평가하는 BLEU 점수
 <-> case-insensitive BLEU score
 
-<img src=https://github.com/user-attachments/assets/87441542-cea4-42d0-9350-163f0550b66e width=400 alt=image>
+<img src="https://github.com/user-attachments/assets/87441542-cea4-42d0-9350-163f0550b66e" width=400 alt="image">
 
 위의 표 1은 실험 결과로 다음과 같은 점을 확인할 수 있습니다.
 
@@ -161,7 +161,7 @@ BLEU 점수가 큰 향상을 보인 건 다음과 같은 경우인데,
 종합했을때, 원본 문장으로부터 이뤄지는 비지도 분할은 특정 도메인의 일본어 단어사전을 찾는데 효과적이다고 판단할 수 있습니다.
 
 ### 📌 Segmentation performance
-<img src=https://github.com/user-attachments/assets/ccdbad53-a26f-4f1e-8d34-60408a628b62 width=400 alt=image>
+<img src="https://github.com/user-attachments/assets/ccdbad53-a26f-4f1e-8d34-60408a628b62" width=400 alt="image">
 
 
 표2는 여러 설정에서의 학습과 분할 성능을 요약하고 있습니다.
