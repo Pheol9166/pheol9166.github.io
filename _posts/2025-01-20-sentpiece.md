@@ -126,7 +126,7 @@ SentencePiece는 TSV 파일을 이용한 커스텀 정규화 규칙들 역시 �
 
 <img src="https://github.com/user-attachments/assets/03166a5a-64a9-4732-9bb6-fae32c8ad7ee" width=400 alt="image">
 
-그림 6은 unigram language model를 사용해 subword regularization을 진행하는 파이썬 코드를 나타내고 있습니다. 여기서 텍스트인 "New York"은 실행횟수에 따라 다르게 토큰화되는데, 자세한 내용은 [Subword Regularizaiton](https://velog.io/@pheol9166/NLP-Paper-Review-Subword-Regularization#subword-sampling)을 봐주시길 바랍니다.
+그림 6은 unigram language model를 사용해 subword regularization을 진행하는 파이썬 코드를 나타내고 있습니다. 여기서 텍스트인 "New York"은 실행횟수에 따라 다르게 토큰화되는데, 자세한 내용은 [Subword Regularizaiton](https://pheol9166.github.io/nlp%20paper%20reiew/subword/#subword-sampling)을 봐주시길 바랍니다.
 
 <img src="https://github.com/user-attachments/assets/1355b54a-a31d-432e-8748-48ef3f223f4f" width=400 alt="image">
 
