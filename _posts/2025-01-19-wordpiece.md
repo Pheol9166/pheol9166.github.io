@@ -119,7 +119,8 @@ segmentation algorithm은 기본 문자에서 시작하는 역 바이너리 트�
 
 표 1에서는 기본 단어 인벤토리의 크기(50k, 100k, 200k)에 따른 일어 LM의 perplexity를 나타내고 있는데, 테스트 집합을 랜덤으로 뽑은 rand250k 집합과 상위 10k개를 뽑은 top10k 집합으로 나뉘어져 있다.
 
-![image](https://github.com/user-attachments/assets/9dfde4ff-743c-4448-9586-2e5fd318e72c)
+<img src=https://github.com/user-attachments/assets/47f3dd01-78fc-46e7-a327-ffca5bcf9ab4 width=500>
+
 
 단어 정의가 인벤토리 크기에 따라 달라지기에 perplexity 자체를 비교하는 것은 의미가 없으나, 문장 별 평균 비용(디코딩 과정에서의 로그 가능도를 통해 계산이 가능하다.)을 통해 비교할 수 있다.
 
@@ -153,7 +154,8 @@ segmentation algorithm은 기본 문자에서 시작하는 역 바이너리 트�
 또한, 무작정 많은 발음 데이터를 학습시키는 건 accuracy의 감소로 이어짐
 낮은 빈도의 발음이나 높은 빈도수의 짧은 단어(단일 한자나 단일 ASCII 단어) 발음을 추가한다면, 성능 감소가 이뤄질 수 있다.
 
-![image](https://github.com/user-attachments/assets/b915e587-8c39-423e-a3cd-ad6e4b82e32e)
+<img src=https://github.com/user-attachments/assets/68905916-fa79-420e-853e-51e693570cbd width=500>
+
 
 표 2는 일어 이름 발음을 추가했을 때의 accuracy를 보여주는데, 추가하는 발음이 많을수록 감소하는 경향을 보인다.
 
