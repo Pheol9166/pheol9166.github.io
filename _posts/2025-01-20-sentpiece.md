@@ -1,5 +1,5 @@
 ---
-title: "[NLP Paper Reivew] Sentencepiece"
+title: "[NLP Paper Review] Sentencepiece"
 excerpt: "SentencePiece 논문 리뷰"
 
 categories:
