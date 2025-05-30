@@ -29,7 +29,7 @@ header:
 
 ![image](https://github.com/user-attachments/assets/fcd1ee83-065c-4b54-adf3-74b37a734a30)
 
-NMT는 end-to-end로 구성된 거대한 신경망입니다. 입력 문장 $x_1, ..., x_n$을 타겟 문장 $y_m, ..., y_m$로 번역하는 과정에서 조건부 확률 $p(y|x)$을 계산하는 방식으로 이뤄집니다.
+NMT는 end-to-end로 구성된 거대한 신경망입니다. 입력 문장 $x_1, ..., x_n$을 타겟 문장 $y_m, ..., y_m$로 번역하는 과정에서 조건부 확률 $p(y \mid x)$을 계산하는 방식으로 이뤄집니다.
 
 NMT 구조는 **encoder**와 **decoder** 두 가지로 이뤄져 있는데, encoder는 각 입력 문장 별로 representation $$s$$를 계산하고, decoder는 해당 representation을 기반으로 타겟 단어를 하나씩 생성합니다. 이를 위해 decoder는 전체 문장의 조건부 확률를 다음과 같이 분해(decomposition)합니다.
 
@@ -109,15 +109,15 @@ score 함수의 경우 content-based 함수라고도 불리며 논문에서는 �
 
 1. **Dot**(내적)
 
-	: $$\text{score}(h_t, \bar{h}_s) = h_t^\top \bar{h}_s$$
+	: $\text{score}(h_t, \bar{h}_s) = h_t^\top \bar{h}_s$
 
 2. **General**(내적 후 가중치곱)
 
-	: $$\text{score}(h_t, \bar{h}_s) = h_t^\top W_a \bar{h}_s$$
+	: $\text{score}(h_t, \bar{h}_s) = h_t^\top W_a \bar{h}_s$
 
 3. **Concat**
 
-	: $$\text{score}(h_t, \bar{h}_s) = v_a^\top \tanh(W_a [h_t ; \bar{h}_s])$$
+	: $\text{score}(h_t, \bar{h}_s) = v_a^\top \tanh(W_a [h_t ; \bar{h}_s])$
     
 4. Location(초창기 사용)
     
@@ -133,10 +133,10 @@ score 함수의 경우 content-based 함수라고도 불리며 논문에서는 �
 
 2. 계산이 더 간단함.
 	- global attention
-      - $$h_t \rightarrow a_t \rightarrow c_t \rightarrow \tilde{h}$$
+      - $h_t \rightarrow a_t \rightarrow c_t \rightarrow \tilde{h}$
     
     - Bahdanau
-      - $$h_{t-1} \rightarrow a_t \rightarrow c_t \rightarrow h_t$$
+      - $h_{t-1} \rightarrow a_t \rightarrow c_t \rightarrow h_t$
       - deep-output 층과 maxout 층을 거쳐야함.
       
 3. alignment function이 다양함
