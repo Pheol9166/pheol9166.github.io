@@ -4,6 +4,7 @@ excerpt: "Japanese and Korean Voice Search 논문 리뷰"
 
 categories:
   - NLP
+  - NLP Paper Review
 last_modified_at: 2025-01-19T08:06:00-05:00
 
 header:
