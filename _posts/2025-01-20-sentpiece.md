@@ -3,6 +3,7 @@ title: "[NLP Paper Review] Sentencepiece"
 excerpt: "SentencePiece 논문 리뷰"
 
 categories:
+  - "NLP"
   - "NLP Paper Review"
 
 last_modified_at: 2025-01-20T08:06:00-05:00
