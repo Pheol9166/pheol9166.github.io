@@ -3,7 +3,6 @@ title: "[NLP Paper Review] Effective Approaches to Attention-based Neural Machin
 excerpt: "Attention: Effective Approaches to Attention-based Neural Machine Translation 논문 리뷰"
 
 categories:
-  - NLP
   - NLP Paper Review
 last_modified_at: 2025-05-30T08:06:00-05:00
 
