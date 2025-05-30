@@ -4,6 +4,7 @@ excerpt: "Attention: Effective Approaches to Attention-based Neural Machine Tran
 
 categories:
   - NLP
+  - NLP Paper Review
 last_modified_at: 2025-05-30T08:06:00-05:00
 
 header:
@@ -14,18 +15,21 @@ header:
 해당 논문은 기존에 NMT(neural machine translation)에 사용되던 attention mechanism을 효율적으로 사용하기 위한 방법을 제시합니다. 
 
 - global approach
+
   : 소스 내 모든 단어를 참조한 attention 방식
   
 - local approach
+
   : 소스 내 특정 하위집합만을 참조하는 방식
   
 위와 같은 방식으로 attention을 사용하지 않는 경우보다 BLEU 포인트가 5.0 더 높게 나왔고, 여러 attention mechanism을 섞은 앙상블 모델 역시 WMT'15 English to German 데이터에서 SOTA를 달성하였습니다.
 
 
 ## ✔ NMT & Attention mechanism
-![image](https://github.com/user-attachments/assets/72be3819-5d49-493e-abd2-19bb45ca5dc7)
 
-NMT는 end-to-end로 구성된 거대한 신경망입니다. 입력 문장 $$x_1, ..., x_n$$을 타겟 문장 $$y_m, ..., y_m$$로 번역하는 과정에서 조건부 확률 $$p(y|x)$$을 계산하는 방식으로 이뤄집니다.
+![image](https://github.com/user-attachments/assets/fcd1ee83-065c-4b54-adf3-74b37a734a30)
+
+NMT는 end-to-end로 구성된 거대한 신경망입니다. 입력 문장 $x_1, ..., x_n$을 타겟 문장 $y_m, ..., y_m$로 번역하는 과정에서 조건부 확률 $p(y|x)$을 계산하는 방식으로 이뤄집니다.
 
 NMT 구조는 **encoder**와 **decoder** 두 가지로 이뤄져 있는데, encoder는 각 입력 문장 별로 representation $$s$$를 계산하고, decoder는 해당 representation을 기반으로 타겟 단어를 하나씩 생성합니다. 이를 위해 decoder는 전체 문장의 조건부 확률를 다음과 같이 분해(decomposition)합니다.
 
@@ -140,7 +144,7 @@ score 함수의 경우 content-based 함수라고도 불리며 논문에서는 �
     
 
 ### ✅ Local Attention
-![image](https://github.com/user-attachments/assets/9f7eace0-f17f-41e3-be88-74e91bd1fcd7)
+![image](https://github.com/user-attachments/assets/71abccb7-bd13-4a32-a54a-a7f7980d5d61)
 
 global attetnion은 소스 전체의 hidden state를 고려하기 때문에 비용이 크고, 크기가 큰 문서들을 번역할 때는 적합하지 않습니다. 이를 해결하기 위해 타겟 단어 당 **소스의 일부(subset)**만 참조하는 local attention이 등장하게 되었습니다.
 
@@ -149,6 +153,7 @@ local attention은 t 시점의 타겟 단어 별로 **aligned position**(타겟 
 $$p_t$$를 정하는 방법은 두 가지가 있습니다.
 
 1. **Monotonic alignment(local-m)**
+   
    : 소스 시퀀스와 타겟 시퀀스가 순차적으로 정렬되어 있다고 상정
    
     => $$p_t = t$$로 설정   
@@ -157,6 +162,7 @@ $$p_t$$를 정하는 방법은 두 가지가 있습니다.
     
     
 2. **Predictive alignment(local-p)**
+   
 	: 다음 식에 따라 aligned position $$p_t$$를 예측합니다. (동적으로 $$p_t$$ 계산)
       
       $$p_t = S \cdot \sigma\left( \mathbf{v}_p^\top \tanh\left( W_p h_t \right) \right)$$
